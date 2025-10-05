@@ -1,7 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<<<<<<< HEAD
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          https://maven.apache.org/maven-v4_0_0.xsd">
+=======
+         xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+>>>>>>> 5cf43389935907f0288ab0508eb528c094707b34
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.aitu</groupId>
