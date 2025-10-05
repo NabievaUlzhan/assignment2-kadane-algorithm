@@ -78,10 +78,10 @@ class KadaneTest {
     @Test
     void optimizedMatchesBaselineOnRandom() {
         Random rnd = new Random(321);
-        for (int t=0; t<50; t++) {
+        for (int t = 0; t < 50; t++) {
             int n = 800;
             int[] a = new int[n];
-            for (int i=0;i<n;i++) a[i] = rnd.nextInt(20001) - 10000;
+            for (int i = 0; i < n; i++) a[i] = rnd.nextInt(20001) - 10000;
             var base = Kadane.maxSubarray(a, new PerformanceTracker());
             var opt  = Kadane.maxSubarrayOptimizedLong(a).toIntResultSaturated();
             assertEquals(base.maxSum, opt.maxSum);
