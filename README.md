@@ -63,9 +63,10 @@ Size,Time (ms),Majority Element,Comparisons,Array Accesses,
 10000,2,3166,7,15066,20000  
 100000,5,8668,7,150559,200000   
 
-![img_5.png](img_5.png)
 
-![img_4.png](img_4.png)
+<img src="docs\performance-plots\bmmv_arrayAccesses.png"></img>
+
+<img src="docs\performance-plots\bmmv_comparisons.png"></img>
 
 ## 5. Advantages & Limitations
 ### Advantages  
