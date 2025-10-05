@@ -87,8 +87,28 @@ Validation Step Needed:
 Although the algorithm identifies a candidate, it requires a second pass to confirm whether the candidate is indeed the 
 majority element. This adds a slight overhead, particularly in scenarios where the majority condition is not met.
 
-## 6. Compare
+## 6. Comparing both algorithms
++ They solve different problems.  
+Boyer–Moore Majority Vote (BMMV) detects whether a value occurs > ⌊n/2⌋ times and returns it if so.
+Kadane’s algorithm finds the maximum-sum contiguous subarray and its indices.
 
++ Both are linear-time, constant-space one-pass style algorithms (Kadane truly single pass; BMMV is “single-pass candidate + O(n) verification” in practice).
+
++ Failure modes differ.  
+BMMV must report “no majority” if none exists (verification is essential).
+Kadane always returns a subarray; for all-negative arrays it returns the largest (least negative) element.
+
+### Quick comparative example
+
++ Input: [2, 2, 1, 2, 3, 2, 2]
+
+BMMV: returns 2 (majority exists).   
+Kadane: returns the contiguous subarray with the maximum sum and its indices (depends on numeric values, not frequencies).
+
++ Input: [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+
+BMMV: no majority (> ⌊n/2⌋) → report “no majority.”  
+Kadane: returns sum 6 and indices [3..6] (for 4 + (-1) + 2 + 1).
 
 ## 7. Usage
 mvn -q -DskipTests compile  
